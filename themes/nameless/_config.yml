@@ -1,18 +1,17 @@
-
 # html lang
 language: en
 
 # main menu navigation
 menu:
   Home: /
-  About: /about
-  Contact: /contact
+  About: https://codysherman.com
+  # Contact: /contact
   Archives: /archives
 
 # stylesheets loaded in the <head>
 stylesheets:
-- /css/nameless.css
+  - /css/nameless.css
 
 # scripts loaded in the end of the body
 scripts:
-- /js/nameless.js
+  - /js/nameless.js

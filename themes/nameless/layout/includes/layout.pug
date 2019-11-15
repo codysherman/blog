@@ -13,32 +13,24 @@ html(lang=config.language)
     meta(charset='UTF-8')
     title= pageTitle
     link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frow@3/dist/frow.min.css")
+    link(href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet")
     if theme.stylesheets !== undefined && theme.stylesheets.length > 0
       //- stylesheets list from _config.yml
       each url in theme.stylesheets
         link(rel='stylesheet', href=url)
   body
     #css-grid
-      #menu-outer
-        nav#menu-inner
+      #info-column
+        a.blog-page-title(href='/')
+          | Cody Sherman
+        nav#left-inner
           each url, label in theme.menu
             a(href=url)= label
-      #content-outer
-        #content-inner
-          if body
-            div!= body
-          else
-            block content
-      #bottom-outer
-        #bottom-inner
-          span Site construction by
-          span= ' ' + config.author + ' '
-          span using
-          a(href='http://hexo.io')
-            span hexo blog frameworkdd
-          span .
-          br
-          a(href=config.root) Home
+      #post-column
+        if body
+          div!= body
+        else
+          block content
     if theme.scripts !== undefined && theme.scripts.length > 0
       //- scripts list from config.yml
       each url in theme.scripts
