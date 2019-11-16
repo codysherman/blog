@@ -6,7 +6,7 @@ menu:
   Home: /
   About: https://codysherman.com
   # Contact: /contact
-  Archives: /archives
+  # Archives: /archives
 
 # stylesheets loaded in the <head>
 stylesheets:

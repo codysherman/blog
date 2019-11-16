@@ -7,8 +7,9 @@ $animate-speed: 0.4s
   --animate-speed: #{$animate-speed}
 
 html, body
-  font-family: 'Roboto', sans-serif
+  font-family: 'Source Sans Pro', sans-serif
   height: 100%
+  font-size: 19px
 
 #css-grid
   height: 100%
@@ -22,21 +23,17 @@ html, body
   grid-column-end: 3
   grid-row-start: 1
   grid-row-end: last-line
-  align-self: center
+  padding-top: 50%
+  
+  #info-sticky
+    position: sticky
+    top: 0px
   
   nav a
     margin-right: 15px
 
-#post-column
-  grid-column-start: 3
-  grid-column-end: 4
-  grid-row-start: 1
-  grid-row-end: last-line
-  overflow: auto
-  padding-top: 100px
-
 .blog-page-title
-  font-size: 80px
+  font-size: 73px
   font-weight: $bold
   color: $primary-color
   transition: color var(--animate-speed)
@@ -46,3 +43,16 @@ html, body
   &:active
     text-decoration: none
     color: darken($primary-color, 5%)
+  
+#post-column
+  grid-column-start: 3
+  grid-column-end: 4
+  grid-row-start: 1
+  grid-row-end: last-line
+  padding-top: 100px
+
+.recent-post-item
+  margin-bottom: 100px
+
+.date
+  font-size: 18px

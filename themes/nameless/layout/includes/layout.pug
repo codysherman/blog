@@ -13,7 +13,7 @@ html(lang=config.language)
     meta(charset='UTF-8')
     title= pageTitle
     link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frow@3/dist/frow.min.css")
-    link(href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" rel="stylesheet")
     if theme.stylesheets !== undefined && theme.stylesheets.length > 0
       //- stylesheets list from _config.yml
       each url in theme.stylesheets
@@ -21,11 +21,12 @@ html(lang=config.language)
   body
     #css-grid
       #info-column
-        a.blog-page-title(href='/')
-          | Cody Sherman
-        nav#left-inner
-          each url, label in theme.menu
-            a(href=url)= label
+        #info-sticky
+          a.blog-page-title(href='/')
+            | Cody Sherman
+          nav#left-inner
+            each url, label in theme.menu
+              a(href=url)= label
       #post-column
         if body
           div!= body
