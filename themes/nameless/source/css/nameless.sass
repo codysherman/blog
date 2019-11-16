@@ -1,6 +1,9 @@
 $bold: 700
 $primary-color: #02a6a9
 $animate-speed: 0.4s
+$background-color: #eee
+$border-radius: 5px
+$main-font-size: 19px
 
 \:root
   --primary-color: #{$primary-color}
@@ -9,7 +12,7 @@ $animate-speed: 0.4s
 html, body
   font-family: 'Source Sans Pro', sans-serif
   height: 100%
-  font-size: 19px
+  font-size: $main-font-size
 
 #css-grid
   height: 100%
@@ -49,10 +52,50 @@ html, body
   grid-column-end: 4
   grid-row-start: 1
   grid-row-end: last-line
-  padding-top: 100px
+  padding: 100px 0
 
 .recent-post-item
   margin-bottom: 100px
+
+.post
+  img
+    width: 100%
+
+  figure
+    background-color: $background-color
+    margin: 0
+    padding: 19px 30px
+    border-radius: $border-radius
+    font-size: 16px
+
+  iframe
+    display: block
+    margin-left: auto
+    margin-right: auto
+    max-width: 100%
+
+  code
+    background-color: $background-color
+    padding: 2px
+    font-size: $main-font-size - 2
+    border-radius: $border-radius
+
+  blockquote
+    background-color: $background-color
+    margin: 0
+    padding: 19px 30px
+    position: relative
+
+    &::before
+      content: ''
+      display: block
+      width: 2px
+      background-color: #888888
+      left: 14px
+      top: 38px
+      bottom: 38px
+      position: absolute
+
 
 .date
   font-size: 18px

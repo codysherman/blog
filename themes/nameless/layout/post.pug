@@ -3,5 +3,6 @@ extends includes/layout.pug
 block content
   article#post
     h1= page.title
-    != page.content
+    .post
+      != page.content
   #paginator!= paginator()
