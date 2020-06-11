@@ -97,7 +97,7 @@ theme: nameless
 deploy:
   type: ""
 
-node_sass:
-  outputStyle: nested
+sass:
+  outputStyle: expanded
   precision: 5
   sourceComments: false
